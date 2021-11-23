@@ -2,7 +2,8 @@ import React from 'react'
 import './header.styles.scss'
 import { Link } from 'react-router-dom'
 import { ReactComponent as Logo} from '../../assets/crown.svg'
-import { auth}  from '../../firebase/firebase.utils'
+import { auth }  from '../../firebase/firebase.utils'
+import { connect } from 'react-redux'  //connect is a HOF 
  
 const Header = ({ currentUser }) => (
   <div className="header">
@@ -20,11 +21,15 @@ const Header = ({ currentUser }) => (
         currentUser 
         ?
         <div className="option" onClick={() => auth.signOut()}>SIGN OUT</div>
-        : 
+        : //null user 
         <Link className="option" to="/signin">SIGN IN</Link>
       }
     </div>
   </div>
 )
 
-export default Header;
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser  //null user atm since no actions setup in the user.actions yet
+})
+
+export default connect(mapStateToProps)(Header);
