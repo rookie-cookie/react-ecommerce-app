@@ -9,6 +9,7 @@ Redux Persist
 Firebase  
 Stripe API  
 CSS + SCSS   
+Styled-Components  
 Heroku  
 
  
