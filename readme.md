@@ -15,6 +15,7 @@ Stripe API - https://github.com/azmenak/react-stripe-checkout
 CSS + SCSS - https://sass-lang.com/documentation    
 Styled-Components - https://styled-components.com/docs    
 Heroku CLI - https://devcenter.heroku.com/articles/heroku-cli   
+Redux-thunk - https://github.com/reduxjs/redux-thunk  
 
  
 ## See live version below
